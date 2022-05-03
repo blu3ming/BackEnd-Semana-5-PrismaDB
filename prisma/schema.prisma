@@ -19,3 +19,12 @@ model Explorer {
   dateCreated DateTime @default(now())
   lastUpdated DateTime @updatedAt
 }
+
+model Datos {
+  id Int @id @default(autoincrement())
+  name String @db.VarChar(255)
+  lang String @db.VarChar(255)
+  missionCommander String @db.VarChar(255)
+  enrollments Int
+  hasCertification Boolean @default(false)
+}
