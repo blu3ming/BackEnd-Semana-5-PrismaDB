@@ -8,8 +8,8 @@ const prisma = new PrismaClient();
       update: {},
       create: {
         name: 'Woopa',
-				username: 'ajolonauta',
-				mission: 'Node'
+        username: 'ajolonauta',
+        mission: 'Node'
       },
     });
 
@@ -18,8 +18,8 @@ const prisma = new PrismaClient();
       update: {},
       create: {
         name: 'Woopa1',
-				username: 'ajolonauta1',
-				mission: 'Node'
+        username: 'ajolonauta1',
+        mission: 'Node'
       },
     });
 
@@ -28,38 +28,30 @@ const prisma = new PrismaClient();
       update: {},
       create: {
         name: 'Woopa 2',
-				username: 'ajolonauta2',
-				mission: 'Java'
+        username: 'ajolonauta2',
+        mission: 'Java'
       },
     });
 
-    const woopa3 = await prisma.explorer.upsert({
-      where: { name: 'Woopa 3' },
+    const explorer2 = await prisma.datos.upsert({
+      where: { name: 'Explorer 2' },
       update: {},
       create: {
-        name: 'Woopa 3',
-				username: 'ajolonauta3',
-				mission: 'Node'
+        name: 'Explorer 2',
+        lang: 'spanish',
+        missionCommander: 'Carlo',
+        enrollments: 1,
       },
     });
 
-    const woopa4 = await prisma.explorer.upsert({
-        where: { name: 'Woopa 4' },
+    const explorer3 = await prisma.datos.upsert({
+        where: { name: 'Explorer 3' },
         update: {},
         create: {
-          name: 'Woopa 4',
-                  username: 'ajolonauta4',
-                  mission: 'Node'
-        },
-      });
-
-      const woopa5 = await prisma.explorer.upsert({
-        where: { name: 'Woopa 5' },
-        update: {},
-        create: {
-          name: 'Woopa 5',
-                  username: 'ajolonauta5',
-                  mission: 'Node'
+          name: 'Explorer 3',
+          lang: 'english',
+          missionCommander: 'Carlo',
+          enrollments: 2,
         },
       });
 

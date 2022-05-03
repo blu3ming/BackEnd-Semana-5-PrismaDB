@@ -22,7 +22,7 @@ model Explorer {
 
 model Datos {
   id Int @id @default(autoincrement())
-  name String @db.VarChar(255)
+  name String @unique
   lang String @db.VarChar(255)
   missionCommander String @db.VarChar(255)
   enrollments Int
