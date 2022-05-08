@@ -66,7 +66,40 @@ const prisma = new PrismaClient();
             },
         });
 
-        console.log("Create 3 explorers");
+        const commander1 = await prisma.missionCommander.upsert({
+            where: { name: "Mission Commander 1" },
+            update: {},
+            create: {
+                name: "Mission Commander 1",
+                username: "mcGio",
+                mainStack: "Node",
+                currentEnrollment: true,
+                hasAzureCertification: true
+            },
+        });
+
+        const commander2 = await prisma.missionCommander.upsert({
+            where: { name: "Mission Commander 2" },
+            update: {},
+            create: {
+                name: "Mission Commander 2",
+                username: "mcCarlo",
+                mainStack: "Java",
+                currentEnrollment: true
+            },
+        });
+
+        const commander3 = await prisma.missionCommander.upsert({
+            where: { name: "Mission Commander 3" },
+            update: {},
+            create: {
+                name: "Mission Commander 3",
+                username: "mcArenas",
+                mainStack: "Node"
+            },
+        });
+
+        console.log("Data added do DB");
     } catch(e) {
         console.error(e);
         process.exit(1);
