@@ -28,3 +28,12 @@ model Datos {
   enrollments Int
   hasCertification Boolean @default(false)
 }
+
+model MissionCommander {
+  id Int @id @default(autoincrement())
+  name String @unique
+  username String @db.VarChar(255)
+  mainStack String @db.VarChar(255)
+  currentEnrollment Boolean @default(false)
+  hasAzureCertification Boolean @default(false)
+}
